@@ -11,6 +11,7 @@ import MapKit
 
 class ViewController: UIViewController {
 
+    
     @IBOutlet weak var mapkit: MKMapView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,6 +54,27 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    //zoom out
+    @IBAction func ZoomOut(_ sender: Any) {
+        print("zoom out pressed")
+        var r = mapkit.region
+        r.span.latitudeDelta = r.span.latitudeDelta * 2
+        r.span.longitudeDelta = r.span.longitudeDelta * 2
+        self.mapkit.setRegion(r, animated: true)
+        
+    }
+    
+    //zoom in
+    @IBAction func ZoomIn(_ sender: Any) {
+         print("zoom in pressed")
+        var r = mapkit.region
+        r.span.latitudeDelta = r.span.latitudeDelta / 2
+         r.span.longitudeDelta = r.span.longitudeDelta / 2
+         self.mapkit.setRegion(r, animated: true)
+        
+        
+        
+    }
 
 }
 
