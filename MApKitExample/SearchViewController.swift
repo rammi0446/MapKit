@@ -39,11 +39,11 @@ class SearchViewController: UIViewController {
         let query = txtSearch.text!
         //send the keyword to apple
         let searchRequest = MKLocalSearchRequest()
-        searchRequest.naturalLanguageQuery = query
+        searchRequest.naturalLanguageQuery = query  //what to search
         
         let coordinate = CLLocationCoordinate2DMake(43.6532,-79.3832)
         let span = MKCoordinateSpanMake(0.5, 0.5)
-        let r = MKCoordinateRegionMake(coordinate, span)
+        let r = MKCoordinateRegionMake(coordinate, span)  // where to search
         
         searchRequest.region = r
         
@@ -62,6 +62,7 @@ class SearchViewController: UIViewController {
                  print("name : \(x.phoneNumber)")
                  print("name : \(x.placemark.coordinate.latitude)")
                 print("name : \(x.placemark.coordinate.longitude)")
+                print("===============")
             }
         }
         //wait for apple the results
