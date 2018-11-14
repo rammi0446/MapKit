@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9B630C55219B177700C22CB6 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B630C54219B177700C22CB6 /* LocationViewController.swift */; };
+		9BB7CAE9219C77DA00AD7CDE /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB7CAE8219C77DA00AD7CDE /* SearchViewController.swift */; };
 		9BD16A912199EB0D00C82835 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD16A902199EB0D00C82835 /* AppDelegate.swift */; };
 		9BD16A932199EB0D00C82835 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD16A922199EB0D00C82835 /* ViewController.swift */; };
 		9BD16A962199EB0D00C82835 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BD16A942199EB0D00C82835 /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		9B630C54219B177700C22CB6 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		9BB7CAE8219C77DA00AD7CDE /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		9BD16A8D2199EB0D00C82835 /* MApKitExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MApKitExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BD16A902199EB0D00C82835 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9BD16A922199EB0D00C82835 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				9BD16A992199EB1500C82835 /* LaunchScreen.storyboard */,
 				9BD16A9C2199EB1500C82835 /* Info.plist */,
 				9B630C54219B177700C22CB6 /* LocationViewController.swift */,
+				9BB7CAE8219C77DA00AD7CDE /* SearchViewController.swift */,
 			);
 			path = MApKitExample;
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 			files = (
 				9B630C55219B177700C22CB6 /* LocationViewController.swift in Sources */,
 				9BD16A932199EB0D00C82835 /* ViewController.swift in Sources */,
+				9BB7CAE9219C77DA00AD7CDE /* SearchViewController.swift in Sources */,
 				9BD16A912199EB0D00C82835 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
