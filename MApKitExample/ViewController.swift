@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, MKMapViewDelegate {
 
     
     @IBOutlet weak var mapkit: MKMapView!
@@ -28,27 +28,51 @@ class ViewController: UIViewController {
         
         
         // example 2
-        
-        
-        // craete a pin
+        // create a first pin
         let pin = MKPointAnnotation()
         //set the latitude and longitude
         pin.coordinate = x
-    
         // add a information on popup
         pin.title = " here is some information "
-        
         //show the pin on the map
         self.mapkit.addAnnotation(pin)
         
         // second pin
         let pin2 = MKPointAnnotation()
-        pin.coordinate = CLLocationCoordinate2DMake(43.65644, -79.3807)
-        pin.title = "second pin"
+        pin2.coordinate = CLLocationCoordinate2DMake(43.65644, -79.3807)
+        pin2.title = "second pin"
         self.mapkit.addAnnotation(pin2)
         
+        
+        //example 3 draw line
+       // ==========================================
+       // create coordinates for your LINE
+        mapkit.delegate = self
+        //CN tower
+        let pos1 = CLLocationCoordinate2DMake(43.6426, -79.3871)
+        //Lambton
+        let pos2 = CLLocationCoordinate2DMake(43.773738, -79.335531)
+       // put these coordinates in an array
+         var locations = [pos1,pos2]
+       // create an MKPoliline object
+        let polyline = MKPolyline(coordinates: &locations, count: locations.count)
+        
+        mapkit.add(polyline)
+    }
+    
+    //Mark: function to draw polyline
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        if(overlay is MKPolyline)
+        {
+            let r = MKPolylineRenderer(overlay: overlay)
+            r.strokeColor = UIColor.red // set the color on the line
+            r.lineWidth = 4
+            return r
+        }
+        return MKOverlayRenderer()
     }
 
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -75,6 +99,8 @@ class ViewController: UIViewController {
         
         
     }
+    
+    
 
 }
 
